@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
 
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .user-details .user-name{
     font-weight: bold;
@@ -54,7 +54,7 @@
     margin-top: 80px;
     width: 100%;
     height: auto;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     padding: 0 10px;
 }
 
