@@ -33,9 +33,9 @@ function saveCustomers(){
         // stored customers array in local store
         localStorage.setItem('customer',JSON.stringify(customers))
         clearField();
-        loadModal();
+        loadModal("Success","Customer was Saved !");
     }else {
-        alert("Customer is already exit !");
+        loadModal("Warning","Customer is Already Exit ! ");
     }
 
 
@@ -48,7 +48,9 @@ const isExit=(id)=>{
 
 
 
-loadModal=()=>{
+loadModal=(title,message)=>{
+    $('#modal-msg-title').html(title);
+    $('#modal-msg-body').html(message);
     $('#success-modal').click();
 }
 
