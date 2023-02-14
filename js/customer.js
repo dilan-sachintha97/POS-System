@@ -11,7 +11,8 @@ function Customer(id,name,address,salary){
 initializeCustomers=()=>{
     let tempData = JSON.parse(localStorage.getItem('customer'));
     if(tempData !== null){
-        // console.log(tempData);
+        customers = tempData; // to avoid delete data when refresh
+        console.log(tempData);
     }
 }
 
@@ -23,14 +24,29 @@ function saveCustomers(){
         $('#customerAddress').val(),
         Number($('#customerSalary').val())
     );
-    customers.push(customer1);
 
-    // stored customers array in local store
-    localStorage.setItem('customer',JSON.stringify(customers))
-    clearField();
-    loadModal();
+    //check wether customer is already exit?
+    let exit = isExit(customer1.id);
+    console.log(exit);
+    if(exit == undefined){
+        customers.push(customer1);
+        // stored customers array in local store
+        localStorage.setItem('customer',JSON.stringify(customers))
+        clearField();
+        loadModal();
+    }else {
+        alert("Customer is already exit !");
+    }
+
+
 
 }
+
+const isExit=(id)=>{
+  return customers.find(data=>data.id==id);
+}
+
+
 
 loadModal=()=>{
     $('#success-modal').click();
