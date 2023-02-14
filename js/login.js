@@ -6,7 +6,7 @@ const users = [{
     {
         user: 'kamal',
         password: '123',
-        avatar: 'https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1672117202~exp=1672117802~hmac=38bfd8a524b757cc75310c28a870318610121bab638764b9ae4f992235194fc5'
+        avatar: 'https://img.freepik.com/free-psd/3d-illustration-person-with-glasses-half-shaved-head_23-2149436187.jpg?w=740&t=st=1673770909~exp=1673771509~hmac=83f732819b98ce188c15d8c27d6653ca6fbdce1c79cc5b9fa02d25e4ca2353d3'
     }]
 
 const login=()=> {
