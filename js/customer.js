@@ -28,7 +28,12 @@ function saveCustomers(){
     // stored customers array in local store
     localStorage.setItem('customer',JSON.stringify(customers))
     clearField();
+    loadModal();
 
+}
+
+loadModal=()=>{
+    $('#success-modal').click();
 }
 
 clearField=()=>{
